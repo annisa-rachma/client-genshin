@@ -1,35 +1,23 @@
-# client
+# Genshin Info 
+## Introduction
+This README provides information for users to explore detailed information about Genshin Impact characters, engage in real-time chat, discover maps, play puzzles, and learn about the Archons.
+## Links
+- Live Site Client-Side URL: [Live site](https://genshin-info-63.web.app/)
+- Server repository : [Repo server](https://github.com/annisa-rachma/server-genshin)
 
-This template should help get you started developing with Vue 3 in Vite.
+## Features
+### Character Exploration:
+- The home page allows users to explore in-depth information about all Genshin Impact characters.
 
-## Recommended IDE Setup
+### Real-time Chat:
+- Engage in real-time chat when logged in. Users who are not logged in can still read the chat history.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Interactive Maps:
+- Explore Genshin Impact maps, including Statue of the Seven, Teleport Waypoints, and Domains.
 
-## Customize configuration
+### Puzzle Game:
+- Play an entertaining puzzle game featuring Genshin Impact characters. Challenge your skills and have fun!
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### Archon Page:
+- Discover detailed information about the powerful Archons shaping the Genshin Impact world.
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
