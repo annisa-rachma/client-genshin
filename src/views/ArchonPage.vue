@@ -44,7 +44,7 @@ export default {
       ></a>
     </div>
 
-    <!--Chat title-->
+    <!-- title-->
     <div class="mr-24 ml-24 grid content-center text-center grid-cols-8">
       <div class="col-span-3 grid content-center justify-items-end">
         <img src="/arrow.png" class="w-[300px]" />
@@ -54,7 +54,7 @@ export default {
         <img src="/arrow.png" class="w-[300px]" />
       </div>
     </div>
-    <!--Chat title-->
+    <!-- title-->
 
     <div class="mx-[150px] grid content-center mb-36 mt-8 text-center grid-cols-6 divide-y">
       <!--Venti-->

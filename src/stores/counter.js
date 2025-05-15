@@ -2,7 +2,7 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
 
-const server_url = 'https://server-genshin63.annisa-rachma.com'
+const server_url = 'http://localhost:3000'
 export const useCounterStore = defineStore('counter', {
   state: () => {
     return {
