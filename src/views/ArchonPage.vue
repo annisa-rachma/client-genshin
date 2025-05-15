@@ -1,6 +1,9 @@
 <script>
 import FooterComponentVue from '../components/FooterComponent.vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+gsap.registerPlugin(ScrollTrigger)
 export default {
   components : {
     FooterComponentVue
@@ -13,7 +16,25 @@ export default {
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
-  }
+  },
+  mounted() {
+    // Animate each archon block on scroll
+    const sections = document.querySelectorAll('.archon-section')
+
+    sections.forEach((section) => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+      })
+    })
+  },
 }
 </script>
 
@@ -21,25 +42,25 @@ export default {
   <div class="w-[1280px] mx-auto grid h-auto mt-40 absolute left-0 right-0">
     <div class="mx-[150px] grid content-center mb-36 text-center grid-cols-5">
       <a href="#venti">
-        <div class="hover:scale-125">
+        <div class="hover:scale-125 transition-transform duration-300 ease-in-out">
           <img src="/venti-a.png" alt="" />
         </div>
       </a>
       <a href="#zhongli">
-        <div class="hover:scale-125">
+        <div class="hover:scale-125 transition-transform duration-300 ease-in-out">
           <img src="/zhongli.png" alt="" />
         </div>
       </a>
       <a href="#raiden">
-        <div class="hover:scale-125">
+        <div class="hover:scale-125 transition-transform duration-300 ease-in-out">
           <img src="/raiden.png" alt="" /></div
       ></a>
       <a href="#nahida">
-        <div class="hover:scale-125">
+        <div class="hover:scale-125 transition-transform duration-300 ease-in-out">
           <img src="/nahida.png" alt="" /></div
       ></a>
       <a href="#furina">
-        <div class="hover:scale-125">
+        <div class="hover:scale-125 transition-transform duration-300 ease-in-out">
           <img src="/furina.png" alt="" /></div
       ></a>
     </div>
@@ -58,7 +79,7 @@ export default {
 
     <div class="mx-[150px] grid content-center mb-36 mt-8 text-center grid-cols-6 divide-y">
       <!--Venti-->
-      <div id="venti" class="col-span-6 grid grid-cols-6 py-8">
+      <div id="venti" class="archon-section col-span-6 grid grid-cols-6 py-8 scroll-mt-20">
         <div class="col-span-4 text-white grid content-center pl-8 pb-8 text-left">
           <div class="text-5xl font-bold">Venti</div>
           <div class="text-3xl font-semibold mt-2">Anemo Archon</div>
@@ -72,7 +93,7 @@ export default {
               a way to appease Stormterror Dvalin.
             </p>
           </div>
-          <a @click.prevent="handleMoveToDetail(19)" href="">
+          <a @click.prevent="handleMoveToDetail(10000022)" href="">
             <div
               class="text-center col-span-2 text-white font-semibold w-[150px] mt-4 h-10 grid place-content-center rounded-lg border border-white hover:text-[#091418] hover:bg-white"
             >
@@ -89,7 +110,7 @@ export default {
       <!--Venti-->
 
       <!--Zhongli-->
-      <div id="zhongli" class="col-span-6 grid grid-cols-6 py-8">
+      <div id="zhongli" class="archon-section col-span-6 grid grid-cols-6 py-8 scroll-mt-20">
         <div class="col-span-2 grid justify-items-start">
           <div class="">
             <img src="/zhongli.png" alt="" />
@@ -111,7 +132,7 @@ export default {
               path, free from his guidance and protection.
             </p>
           </div>
-          <a @click.prevent="handleMoveToDetail(26)" href="">
+          <a @click.prevent="handleMoveToDetail(10000030)" href="">
             <div
               class="text-center col-span-2 text-white font-semibold w-[150px] mt-4 h-10 grid place-content-center rounded-lg border border-white hover:text-[#091418] hover:bg-white"
             >
@@ -123,7 +144,7 @@ export default {
       <!--Zhongli-->
 
       <!--Raiden-->
-      <div id="raiden" class="col-span-6 grid grid-cols-6 py-8">
+      <div id="raiden" class="archon-section col-span-6 grid grid-cols-6 py-8 scroll-mt-20">
         <div class="col-span-4 text-white grid content-center pt-5 pl-8 pb-8 text-left">
           <div class="text-5xl font-bold">Raiden Shogun</div>
           <div class="text-3xl font-semibold mt-2">Electro Archon</div>
@@ -136,7 +157,7 @@ export default {
               due to her wish to never lose the things that are precious to her ever again.
             </p>
           </div>
-          <a @click.prevent="handleMoveToDetail(47)" href="">
+          <a @click.prevent="handleMoveToDetail(10000052)" href="">
             <div
               class="text-center col-span-2 text-white font-semibold w-[150px] mt-4 h-10 grid place-content-center rounded-lg border border-white hover:text-[#091418] hover:bg-white"
             >
@@ -153,7 +174,7 @@ export default {
       <!--Raiden-->
 
       <!--Nahida-->
-      <div id="nahida" class="col-span-6 grid grid-cols-6 py-8">
+      <div id="nahida" class="archon-section col-span-6 grid grid-cols-6 py-8 scroll-mt-20">
         <div class="col-span-2 grid justify-items-start">
           <div class="">
             <img src="/nahida.png" alt="" />
@@ -175,7 +196,7 @@ export default {
               misconceptions, Nahida embraces her role with unwavering dedication and resilience.
             </p>
           </div>
-          <a @click.prevent="handleMoveToDetail(68)" href="">
+          <a @click.prevent="handleMoveToDetail(10000073)" href="">
             <div
               class="text-center col-span-2 text-white font-semibold w-[150px] mt-4 h-10 grid place-content-center rounded-lg border border-white hover:text-[#091418] hover:bg-white"
             >
@@ -187,7 +208,7 @@ export default {
       <!--Nahida-->
 
       <!--furina-->
-      <div id="furina" class="col-span-6 grid grid-cols-6 py-8">
+      <div id="furina" class="archon-section col-span-6 grid grid-cols-6 py-8 scroll-mt-20">
         <div class="col-span-4 text-white grid content-center pt-5 pl-8 pb-8 text-left">
           <div class="text-5xl font-bold">Furina</div>
           <div class="text-3xl font-semibold mt-2">Hydro Archon</div>
@@ -199,6 +220,13 @@ export default {
               emerged after the end of the Archon War.
             </p>
           </div>
+          <a @click.prevent="handleMoveToDetail(10000089)" href="">
+            <div
+              class="text-center col-span-2 text-white font-semibold w-[150px] mt-4 h-10 grid place-content-center rounded-lg border border-white hover:text-[#091418] hover:bg-white"
+            >
+              More details...
+            </div>
+          </a>
 
         </div>
         <div class="col-span-2 grid justify-items-end">
@@ -208,7 +236,35 @@ export default {
         </div>
       </div>
       <!--furina-->
+
+      <!--mavuika-->
+      <div id="mavuika" class="archon-section col-span-6 grid grid-cols-6 py-8 scroll-mt-20">
+        <div class="col-span-2 grid justify-items-start">
+          <div class="">
+            <img src="/zhongli.png" alt="" />
+          </div>
+        </div>
+        <div class="col-span-4 text-white grid content-center pl-8 pb-8 text-left h-full">
+          <div class="text-5xl font-bold">Mavuika</div>
+          <div class="text-3xl font-semibold mt-2">Pyro Archon</div>
+          <div class="mt-2">
+            <p>
+              Blazing with righteous fury and boundless passion, Mavuika rules Natlan with a fiery heart. Embodying both the chaos of battle and the warmth of devotion, she inspires warriors and artists alike. Her presence ignites courage, her gaze burns with truth—and her will, like flame, never yields.
+            </p>
+          </div>
+          <a @click.prevent="handleMoveToDetail(10000106)" href="">
+            <div
+              class="text-center col-span-2 text-white font-semibold w-[150px] mt-4 h-10 grid place-content-center rounded-lg border border-white hover:text-[#091418] hover:bg-white"
+            >
+              More details...
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--Zhongli-->
     </div>
+
+    
 
     <FooterComponentVue/>
   </div>
