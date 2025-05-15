@@ -112,7 +112,7 @@ export default {
       <!-- section-->
 
       <div class="grid place-content-center mb-48">
-        <iframe :src="src" height="400" width="800" frameBorder="0"></iframe>
+        <iframe :src="src" height="800" width="1240" frameBorder="0"></iframe>
       </div>
       <FooterComponentVue class=""/>
     </div>
