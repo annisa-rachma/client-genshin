@@ -17,31 +17,38 @@ const drawPuzzle = () => {
   ]
   xul.src = images[Math.floor(Math.random() * images.length)]
 
-  console.log(xul.src)
+  xul.onload = () => {
 
-  const autogen = new headbreaker.Canvas('puzzle', {
-    width: 900,
-    height: 500,
-    pieceSize: 100,
-    proximity: 20,
-    borderFill: 10,
-    strokeWidth: 2,
-    lineSoftness: 0.18,
-    painter: new headbreaker.painters.Konva(),
-    image: xul,
-    preventOffstageDrag: true,
-    fixed: true
-  })
+    const puzzleContainer = document.getElementById('puzzle')
+      if (puzzleContainer) {
+        puzzleContainer.innerHTML = ''
+      }
+  
+    const autogen = new headbreaker.Canvas('puzzle', {
+      width: 900,
+      height: 500,
+      pieceSize: 100,
+      proximity: 20,
+      borderFill: 10,
+      strokeWidth: 2,
+      lineSoftness: 0.18,
+      painter: new headbreaker.painters.Konva(),
+      image: xul,
+      preventOffstageDrag: true,
+      fixed: true
+    })
+  
+    autogen.adjustImagesToPuzzleHeight()
+    autogen.autogenerate({
+      horizontalPiecesCount: 5,
+      verticalPiecesCount: 3
+    })
+  
+    autogen.shuffleGrid()
+  
+    autogen.draw()
+  }
 
-  autogen.adjustImagesToPuzzleHeight()
-  autogen.autogenerate({
-    horizontalPiecesCount: 5,
-    verticalPiecesCount: 3
-  })
-
-  autogen.shuffleGrid()
-
-  autogen.draw()
 }
 
 export default {
