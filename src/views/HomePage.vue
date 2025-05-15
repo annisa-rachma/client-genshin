@@ -53,84 +53,84 @@ export default {
         <div class="col-span-3 grid grid-cols-7 mx-40">
           <a v-if="selectedEl == 'Anemo'" @click.prevent="doClick('Anemo')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Anemo.svg" class="w-16" />
+              <img src="/Element_Anemo.svg" class="w-16 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
           <a v-else @click.prevent="doClick('Anemo')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Anemo.svg" class="w-16 grayscale hover:grayscale-0" />
+              <img src="/Element_Anemo.svg" class="w-16 grayscale hover:grayscale-0 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
 
           <a v-if="selectedEl == 'Cryo'" @click.prevent="doClick('Cryo')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Cryo.svg" class="w-16" />
+              <img src="/Element_Cryo.svg" class="w-16 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
           <a v-else @click.prevent="doClick('Cryo')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Cryo.svg" class="w-16 grayscale hover:grayscale-0" />
+              <img src="/Element_Cryo.svg" class="w-16 grayscale hover:grayscale-0 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
 
           <a v-if="selectedEl == 'Dendro'" @click.prevent="doClick('Dendro')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Dendro.svg" class="w-16" />
+              <img src="/Element_Dendro.svg" class="w-16 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
           <a v-else @click.prevent="doClick('Dendro')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Dendro.svg" class="w-16 grayscale hover:grayscale-0" />
+              <img src="/Element_Dendro.svg" class="w-16 grayscale hover:grayscale-0 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
 
           <a v-if="selectedEl == 'Electro'" @click.prevent="doClick('Electro')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Electro.svg" class="w-16" />
+              <img src="/Element_Electro.svg" class="w-16 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
           <a v-else @click.prevent="doClick('Electro')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Electro.svg" class="w-16 grayscale hover:grayscale-0" />
+              <img src="/Element_Electro.svg" class="w-16 grayscale hover:grayscale-0 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
 
           <a v-if="selectedEl == 'Geo'" @click.prevent="doClick('Geo')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Geo.svg" class="w-16" />
+              <img src="/Element_Geo.svg" class="w-16 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
           <a v-else @click.prevent="doClick('Geo')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Geo.svg" class="w-16 grayscale hover:grayscale-0" />
+              <img src="/Element_Geo.svg" class="w-16 grayscale hover:grayscale-0 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
 
           <a v-if="selectedEl == 'Hydro'" @click.prevent="doClick('Hydro')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Hydro.svg" class="w-16" />
+              <img src="/Element_Hydro.svg" class="w-16 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
           <a v-else @click.prevent="doClick('Hydro')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Hydro.svg" class="w-16 grayscale hover:grayscale-0" />
+              <img src="/Element_Hydro.svg" class="w-16 grayscale hover:grayscale-0 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
 
           <a v-if="selectedEl == 'Pyro'" @click.prevent="doClick('Pyro')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Pyro.svg" class="w-16" />
+              <img src="/Element_Pyro.svg" class="w-16 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
           <a v-else @click.prevent="doClick('Pyro')" href="">
             <div class="grid place-content-center">
-              <img src="/Element_Pyro.svg" class="w-16 grayscale hover:grayscale-0" />
+              <img src="/Element_Pyro.svg" class="w-16 grayscale hover:grayscale-0 hover:scale-125 transition-transform duration-300 ease-in-out" />
             </div>
           </a>
         </div>
 
         <div
-          class="col-span-3 mt-12 mr-24 ml-24 grid content-center text-center grid-cols-3 mb-20 gap-y-10"
+          class="col-span-3 mt-12 mr-24 ml-24 grid content-center text-center grid-cols-3 mb-20 gap-y-10 "
         >
           <CharacterCardVue
             v-for="character in characters"

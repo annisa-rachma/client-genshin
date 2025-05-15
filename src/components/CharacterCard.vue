@@ -16,7 +16,7 @@ export default {
 <template>
   <!--character card-->
   <a @click.prevent="handleMoveToDetail" href="">
-    <div>
+    <div class="hover:scale-[1.1] transition-transform duration-300 ease-in-out">
       <div class="grid place-content-center">
         <img :src="character.charImage" class="w-[180px] h-auto" />
       </div>

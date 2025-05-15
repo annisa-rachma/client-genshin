@@ -13,6 +13,7 @@
     "axios": "^1.5.1",
     "bad-words": "^3.0.4",
     "firebase": "^10.5.0",
+    "gsap": "^3.13.0",
     "headbreaker": "^3.0.0",
     "konva": "^9.2.2",
     "pinia": "^2.1.7",
