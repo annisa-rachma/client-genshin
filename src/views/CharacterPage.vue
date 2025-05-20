@@ -28,7 +28,7 @@ export default {
             { opacity: 1, y: 0, duration: 2.5, ease: "power2.out" }
           );
         });
-      }, 2000);
+      }, 2500);
     },
   },
   created() {
