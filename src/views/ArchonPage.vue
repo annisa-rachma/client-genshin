@@ -39,8 +39,8 @@ export default {
 </script>
 
 <template>
-  <div class="w-[1280px] mx-auto grid h-auto mt-40 absolute left-0 right-0">
-    <div class="mx-[150px] grid content-center mb-36 text-center grid-cols-5">
+  <div class="w-[100%] mx-auto grid h-auto mt-40 absolute left-0 right-0">
+    <div class="mx-[150px] grid content-center mb-36 text-center grid-cols-6">
       <a href="#venti">
         <div class="hover:scale-125 transition-transform duration-300 ease-in-out">
           <img src="/venti-a.png" alt="" />
@@ -62,6 +62,10 @@ export default {
       <a href="#furina">
         <div class="hover:scale-125 transition-transform duration-300 ease-in-out">
           <img src="/furina.png" alt="" /></div
+      ></a>
+      <a href="#mavuika">
+        <div class="hover:scale-125 transition-transform duration-300 ease-in-out">
+          <img src="/mavuika.png" alt="" /></div
       ></a>
     </div>
 
@@ -241,7 +245,7 @@ export default {
       <div id="mavuika" class="archon-section col-span-6 grid grid-cols-6 py-8 scroll-mt-20">
         <div class="col-span-2 grid justify-items-start">
           <div class="">
-            <img src="/zhongli.png" alt="" />
+            <img src="/mavuika.png" alt="" />
           </div>
         </div>
         <div class="col-span-4 text-white grid content-center pl-8 pb-8 text-left h-full">
