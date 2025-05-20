@@ -1,13 +1,13 @@
 <script>
 import AvatarProfileVue from './AvatarProfile.vue'
-import { useAuth } from '../Firebase.js'
+// import { useAuth } from '../Firebase.js'
 
 export default {
   components: { AvatarProfileVue },
-  setup() {
-    const { user, isLogin, signOut, signIn } = useAuth()
-    return { user, isLogin, signOut, signIn }
-  }
+  // setup() {
+  //   const { user, isLogin, signOut, signIn } = useAuth()
+  //   return { user, isLogin, signOut, signIn }
+  // }
 }
 </script>
 
@@ -157,7 +157,7 @@ export default {
             <div class="col-span-1">
               <AvatarProfileVue :src="user.photoURL" />
             </div>
-            <a @click.prevent="signOut" href="">
+            <a  href="">
               <div
                 class="text-center col-span-2 text-white text-lg font-semibold w-24 h-10 grid place-content-center rounded-lg border border-white hover:bg-sky-300 hover:text-white hover:border-sky-300"
               >
@@ -166,7 +166,7 @@ export default {
             </a>
             <!-- <button class="text-gray-400 hover:text-white" @click="signOut">Sign Out</button> -->
           </div>
-          <a v-else @click.prevent="signIn" href="">
+          <a v-else  href="">
             <div
               class="text-center text-white text-lg font-semibold w-24 h-10 grid place-content-center rounded-lg border border-white hover:bg-sky-300 hover:text-white hover:border-sky-300"
             >

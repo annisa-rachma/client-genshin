@@ -3,36 +3,36 @@ import MessageComponentVue from '../components/MessageComponent.vue'
 import FooterComponentVue from '../components/FooterComponent.vue'
 
 import { ref, watch, nextTick } from 'vue'
-import { useAuth, useChat } from '../Firebase.js'
+// import { useAuth, useChat } from '../Firebase.js'
 
 export default {
   components: {
     MessageComponentVue,
     FooterComponentVue
   },
-  setup() {
-    const { user, isLogin } = useAuth()
-    const { messages, sendMessage } = useChat()
+  // setup() {
+  //   const { user, isLogin } = useAuth()
+  //   const { messages, sendMessage } = useChat()
 
-    const bottom = ref(null)
-    watch(
-      messages,
-      () => {
-        nextTick(() => {
-          bottom.value?.scrollIntoView({ behavior: 'smooth' })
-        })
-      },
-      { deep: true }
-    )
+  //   const bottom = ref(null)
+  //   watch(
+  //     messages,
+  //     () => {
+  //       nextTick(() => {
+  //         bottom.value?.scrollIntoView({ behavior: 'smooth' })
+  //       })
+  //     },
+  //     { deep: true }
+  //   )
 
-    const message = ref('')
-    const send = () => {
-      sendMessage(message.value)
-      message.value = ''
-    }
+  //   const message = ref('')
+  //   const send = () => {
+  //     sendMessage(message.value)
+  //     message.value = ''
+  //   }
 
-    return { user, isLogin, messages, bottom, message, send }
-  }
+  //   return { user, isLogin, messages, bottom, message, send }
+  // }
 }
 </script>
 
@@ -55,7 +55,7 @@ export default {
       <!-- <div class="col-span-3 grid grid-cols-7 mx-24 bg-slate-400 h-8"> -->
       <div class="container-sm col-span-3 mx-auto w-full">
         <!-- <div class=""> -->
-        <MessageComponentVue
+        <!-- <MessageComponentVue
           v-for="{ id, text, userPhotoURL, userName, userId } in messages"
           :key="id"
           :name="userName"
@@ -63,7 +63,7 @@ export default {
           :sender="userId === user?.uid"
         >
           {{ text }}
-        </MessageComponentVue>
+        </MessageComponentVue> -->
         <!-- </div> -->
       </div>
 
