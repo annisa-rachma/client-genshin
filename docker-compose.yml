@@ -1,6 +1,6 @@
 services:
   genshin-fe:
-    image: ghcr.io/annisa-rachma/genshin-fe:latest
+    image: ghcr.io/annisa-rachma/client-genshin:latest
     container_name: genshin-fe
     networks:
       - traefik_network
