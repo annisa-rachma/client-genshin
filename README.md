@@ -2,7 +2,7 @@
 ## Introduction
 This README provides information for users to explore detailed information about Genshin Impact characters, engage in real-time chat, discover maps, play puzzles, and learn about the Archons.
 ## Links
-- Live Site URL: [Live site](https://genshin-info-63.web.app/)
+- Live Site URL: [Live site](https://genshin.annisarachma.com/)
 - Server repository : [Repo server](https://github.com/annisa-rachma/server-genshin)
 
 ## Features
